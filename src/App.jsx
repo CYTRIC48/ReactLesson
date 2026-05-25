@@ -21,7 +21,7 @@ function App() {
       <hr />
       <MyBtn text='+ 1' myClick = {countUp}/>
       <MyBtn text='- 1' myClick = {countDown}/>
-      <MyBtn text='Reset' myClick = {reset}/>
+      {!!count && <MyBtn text='Reset' myClick = {reset}/>}
     </>
   );
 }
