@@ -1,30 +1,18 @@
-import MyCount from './components/MyCount'
-import MyBtn from './components/MyBtn'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import Card from "./components/Card";
+import Form from "./components/Form";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const countUp =() => setCount((prev) => prev + 1 )
-  const countDown =() => setCount((prev) => prev - 1 )
-  const reset =() => setCount(0)
-
   return (
     <>
-      <h1>новый проект</h1>
+      <h1>Bynthytn vfufpby</h1>
+      <Card title="товар №1" text="описание товара" price="1234" />
+      <Card title="товар №2" text="описание товара" price="1234" />
+      <Card title="товар №3" text="описание товара" price="1234" />
+      <Card title="товар №4" text="описание товара" price="1234" />
       <hr />
-      <MyCount count={count}/>
-      <hr />
-      <MyBtn text='+ 1' myClick = {countUp}/>
-      <MyBtn text='- 1' myClick = {countDown}/>
-      {!!count && <MyBtn text='Reset' myClick = {reset}/>}
+      <Form />
     </>
   );
 }
 
-
-export default App
+export default App;
