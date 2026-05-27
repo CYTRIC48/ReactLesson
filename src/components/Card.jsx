@@ -1,15 +1,14 @@
 import styles from "./Card.module.css";
-import Pingvin from "../../public/images/pingviny.jpg";
 
-export default function Card({ title, text, price }) {
+
+export default function Card({ img = '/error.png', title = "нет название", text = "нет текста", price = "нет цены" }) {
   return (
     <div className={styles.card}>
-      {/* <img className={styles.picture} src="/images/pingvin.jpg" alt="" /> */}
-      <img className={styles.picture} src={Pingvin} alt="" />
+      <img src={styles.img} alt={title} />
       <h2>{title}</h2>
       <p>{text}</p>
       <p>{price} $</p>
-      <button className={styles.btn}>Купить</button>
+      <button style={styles.button}>Купить</button>
     </div>
   );
 }
